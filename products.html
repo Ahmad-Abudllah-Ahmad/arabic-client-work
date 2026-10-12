@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>متجر المنتجات | Al Hassan Coffee - أكثر من 150 صنف فاخر</title>
+  <meta name="description" content="تصفح واشترِ منتجات Al Hassan Coffee: +90 صنف بهارات، قهوة عربية، مكسرات، أعشاب، عسل ملكي مع سلة تسوق ودفع إلكتروني وتوصيل بأرامكس وسمسا." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="preloader">
+    <div class="preloader-content">
+      <img src="logo1.jpeg" alt="Al Hassan Coffee" class="preloader-logo" />
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    </div>
+  </div>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html"><img src="logo1.jpeg" alt="Al Hassan Coffee" /></a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+        <li><a href="products.html" class="nav-link active">المنتجات</a></li>
+        <li><a href="categories.html" class="nav-link">الأصناف</a></li>
+        <li><a href="about.html" class="nav-link">من نحن</a></li>
+        <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-chat-btn" id="nav-chat-btn" aria-label="المساعد الذكي" title="المساعد الذكي – اسأل عن المنتجات">
+          🤖
+        </button>
+
+        <button class="nav-cart-btn" id="nav-cart-btn" aria-label="سلة المشتريات" title="سلة المشتريات">
+          🛒
+          <span class="cart-badge">0</span>
+        </button>
+        <a href="https://wa.me/966500000000" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 0.88rem;">واتساب 💬</a>
+        <button class="hamburger" id="hamburger" aria-label="قائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="products.html">المنتجات</a></li>
+      <li><a href="categories.html">الأصناف</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+    </ul>
+  </div>
+
+  <header class="page-hero">
+    <div class="page-hero-content reveal">
+      <span class="slide-badge">سلة تسوق ودفع فوري</span>
+      <h1>قائمة منتجات <span class="gold">Al Hassan</span></h1>
+      <p>اكتشف أكثر من 150 صنفاً مع الأسعار وخيارات الشحن لجميع مدن المملكة</p>
+      
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="product-search" class="search-input" placeholder="ابحث بالاسم (مثال: بهار كبسة، فستق، سدر، يانسون...)" />
+        <button id="search-clear" class="search-clear" aria-label="مسح البحث">✕</button>
+      </div>
+      <div id="total-results-count" class="cat-count-badge" style="display: inline-block; margin-top: 8px;">150+ صنف متوفر</div>
+    </div>
+  </header>
+
+  <section class="filter-bar">
+    <div class="filter-container">
+      <button class="filter-btn active" data-category="all">جميع الأصناف</button>
+      <button class="filter-btn" data-category="spices">🌶️ بهارات (+90 صنف)</button>
+      <button class="filter-btn" data-category="coffee">☕ قهوة عربية</button>
+      <button class="filter-btn" data-category="nuts">🥜 مكسرات (+22 صنف)</button>
+      <button class="filter-btn" data-category="herbs">🌿 أعشاب (+21 نوع)</button>
+      <button class="filter-btn" data-category="grains">🌾 حبوب</button>
+      <button class="filter-btn" data-category="legumes">🫘 بقوليات</button>
+      <button class="filter-btn" data-category="honey">🍯 عسل ملكي</button>
+      <button class="filter-btn" data-category="candy">🍬 كاندي وحلويات</button>
+    </div>
+  </section>
+
+  <main class="products-section">
+    <div class="products-container">
+
+      <div class="category-group reveal-blur" data-category="coffee" id="coffee">
+        <div class="category-banner-card">
+          <img src="img_coffee.jpg" alt="قهوة عربية" class="cat-banner-img" loading="lazy" />
+          <div class="cat-banner-overlay"></div>
+          <div class="cat-banner-content">
+            <h2><span>☕</span> قهوة عربية</h2>
+            <span class="cat-count-badge" style="font-size: 0.95rem; padding: 6px 18px;">12 صنف</span>
+          </div>
+        </div>
+        <div class="products-grid">
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>خلطة الحسن الملكية</h4>
+            <p>خلطة فاخرة بالهيل والزعفران والمستكة بأعلى درجات الإتقان</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="48">48 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>قهوة شقراء خولانية</h4>
+            <p>بن يمني خولاني أصيل مع تحميص خفيف ونكهة عطرية فواحة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="45">45 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>قهوة وسط محوجة</h4>
+            <p>تحميص متوازن مع خلطة الهيل الهندي النقي والزعفران</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="42">42 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>قهوة غامقة ثقيلة</h4>
+            <p>نكهة قوية غنية لعشاق المذاق المركز والعميق</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="44">44 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>بن هرري أصيل</h4>
+            <p>بن إثيوبي هرري درجة أولى منتقى حبة بحبة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="52">52 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>بن خولاني يمني صلب</h4>
+            <p>من قمم جبال صعدة واليمن السعيد، جودة استثنائية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="68">68 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>بن كولومبي سوبريمو</h4>
+            <p>حبوب كولومبية فاخرة بقوام مخملي وإيحاءات كراميل</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="55">55 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>بن إثيوبي يرغاتشيف</h4>
+            <p>إيحاءات فاكهية وزهرية ساحرة ونقاء استثنائي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="62">62 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>خلطة القهوة الشمالية</h4>
+            <p>تحميص خاص على طريقة أهل الشمال مع الهيل والشنة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="46">46 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>خلطة القهوة الحجازية</h4>
+            <p>توليفة تقليدية عريقة بمستكة الشام وهيل فاخر</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="48">48 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>قهوة الشعير الصحية</h4>
+            <p>بديل صحي خالي من الكافيين غني بالألياف والفوائد</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="30">30 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+            <div class="product-emoji">☕</div>
+            <h4>بن برازيلي سانتوس</h4>
+            <p>حبوب محمصة بعناية تناسب القهوة المقطرة والمزج</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="42">42 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-group reveal-blur" data-category="spices" id="spices">
+        <div class="category-banner-card">
+          <img src="img_spices.jpg" alt="بهارات فاخرة" class="cat-banner-img" loading="lazy" />
+          <div class="cat-banner-overlay"></div>
+          <div class="cat-banner-content">
+            <h2><span>🌶️</span> بهارات فاخرة</h2>
+            <span class="cat-count-badge" style="font-size: 0.95rem; padding: 6px 18px;">+90 صنف</span>
+          </div>
+        </div>
+        <div class="products-grid">
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍲</div>
+            <h4>بهار كبسة سعودي فاخر</h4>
+            <p>توليفة بهارات الكبسة العريقة لنكهة ورائحة لا تقاوم</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍲</div>
+            <h4>بهار مندي حضرمي</h4>
+            <p>خلطة خاصة لتبخير وطهي أرز المندي ولحمه</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="29">29 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍲</div>
+            <h4>بهار برياني كشميري</h4>
+            <p>بهارات عطرية هندية بنكهة الزعفران والقرنفل</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="32">32 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍲</div>
+            <h4>بهار مدفون ومظبي</h4>
+            <p>بهار مخصص للطبخ على الحجر والمدفون</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="30">30 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍲</div>
+            <h4>بهار مضغوط حجازي</h4>
+            <p>خلطة متوازنة لألذ مضغوط دجاج ولحم</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍲</div>
+            <h4>بهار بخاري أصيل</h4>
+            <p>نكهة أوزبكية أصيلة بالكمون والجزر المجفف</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="26">26 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍲</div>
+            <h4>بهار سليق طائفي</h4>
+            <p>توليفة ناعمة من المستكة والهيل للأرز السليق</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="25">25 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌶️</div>
+            <h4>بهارات مشكلة ملكية (سبع بهارات)</h4>
+            <p>التوليفة الذهبية الخاصة لجميع الطبخات المنزلية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="34">34 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍛</div>
+            <h4>بهار كاري مدراس حار</h4>
+            <p>كاري هندي طبيعي بلون ذهبي ونكهة غنية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍛</div>
+            <h4>غرام ماسالا هندي</h4>
+            <p>خلطة التوابل العطرية الدافئة للصلصات والأطباق الهندية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="27">27 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌯</div>
+            <h4>بهار شاورما دجاج</h4>
+            <p>خلطة تتبيل الشاورما بالنكهة الشامية الأصيلة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="26">26 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌯</div>
+            <h4>بهار شاورما لحم</h4>
+            <p>تتبيلة لحم غنية بالهيل وجوزة الطيب والسماق</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌮</div>
+            <h4>بهار فاهيتا مكسيكي</h4>
+            <p>خلطة الفاهيتا بالبابريكا والكمون والليمون المجفف</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="29">29 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌮</div>
+            <h4>بهار تاكو مكسيكي</h4>
+            <p>نكهة تكس مكس حيوية متوازنة الحرارة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="29">29 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍔</div>
+            <h4>بهار برجر مدخن</h4>
+            <p>توابل خاصة لخلطة لحم البرجر مع نكهة التدخين الطبيعي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="32">32 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍢</div>
+            <h4>بهار كفتة وكباب تركي</h4>
+            <p>توابل كباب تركية بالأعشاب والكزبرة والبصل المجفف</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="30">30 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">✨</div>
+            <h4>هيل هندي أخضر جامبو (رقم 1)</h4>
+            <p>حبات هيل خضراء ممتلئة بأعلى تركيز عطري وزيتي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="85">85 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">✨</div>
+            <h4>قرنفل سرنديب نقي (مسمار)</h4>
+            <p>حبات مسمار قرنفل طازجة بنكهة قوية زكية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="45">45 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🪵</div>
+            <h4>قرفة سيلانية عيدان أصلية</h4>
+            <p>قرفة سرنديب الرقيقة العطرية الحلوة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="38">38 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">⚫</div>
+            <h4>فلفل أسود حب تيلشيري</h4>
+            <p>أجود وأكبر حبات الفلفل الأسود في العالم</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">⚪</div>
+            <h4>فلفل أبيض حب ماليزي</h4>
+            <p>فلفل أبيض نقي منزوع القشرة للشوربات والصلصات البيضاء</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="32">32 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌾</div>
+            <h4>كمون قصيمي حب</h4>
+            <p>كمون بلدي منتقى عالي الزيوت الطيارة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌾</div>
+            <h4>كزبرة نجدية حب</h4>
+            <p>كزبرة بلدي مجففة تحت الظل لنكهة حمضية منعشة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌾</div>
+            <h4>شمر حب بلدي (سنوت)</h4>
+            <p>بذور الشمر العطرية لنكهة الخبز والشوربات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌾</div>
+            <h4>يانسون حب شامي</h4>
+            <p>يانسون طبيعي بنكهة حلاوة سكرية عطرية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🟡</div>
+            <h4>خردل أصفر حب</h4>
+            <p>حبوب الخردل للصلصات والمخللات وتتبيل اللحوم</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="16">16 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">⚫</div>
+            <h4>خردل أسود حب</h4>
+            <p>بذور خردل قوية حادة للطبخ الآسيوي والهندي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌾</div>
+            <h4>حبة حلوة منقاة</h4>
+            <p>بذور عطرية فاخرة للمعجنات والمشروبات الدافئة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍃</div>
+            <h4>ورق غار تركي مجفف</h4>
+            <p>أوراق غار عريضة سليمة للشوربات وسلق اللحوم</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="15">15 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍋</div>
+            <h4>لومي أسود صحاري كامل</h4>
+            <p>ليمون مجفف عماني لنكهة حمضية مدخنة للكبسات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍋</div>
+            <h4>لومي أصفر مجفف</h4>
+            <p>ليمون أصفر مجفف طبيعي لنكهة حمضية نقية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="16">16 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌰</div>
+            <h4>جوزة الطيب حبوب كاملة</h4>
+            <p>حبات جوزة الطيب الصلبة برائحة دافئة غنية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="25">25 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">⭐</div>
+            <h4>يانسون نجمي صيني</h4>
+            <p>نجوم اليانسون العطرية للشاي والصلصات والشوربات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🟤</div>
+            <h4>كبابة صيني حب (بهار حلو)</h4>
+            <p>نكهة تجمع بين القرفة وجوزة الطيب والفلفل</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🪵</div>
+            <h4>خولنجان صحيح قطع</h4>
+            <p>جذور الخولنجان العطرية الدافئة للقهوة والشوربات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="26">26 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🪨</div>
+            <h4>شيبة / زهرة الصخر</h4>
+            <p>عشبة حجرية أصيلة تمنح الشوربات والكبسة رائحة مميزة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="35">35 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🟡</div>
+            <h4>كركم هندي أصفر نقي 100%</h4>
+            <p>مطحون طازج عالي مادة الكركمين الطبيعية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🫚</div>
+            <h4>زنجبيل هندي مطحون حار</h4>
+            <p>بودرة زنجبيل نقية بدون أي إضافات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="26">26 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌶️</div>
+            <h4>بابريكا مدخنة إسبانية</h4>
+            <p>فلفل حلو مجفف ومدخن على خشب البلوط</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌶️</div>
+            <h4>بابريكا حلوة فاخرة</h4>
+            <p>لون أحمر زاهي ومذاق حلو خالي من الحرارة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="25">25 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌶️</div>
+            <h4>بابريكا حارة دي لا فيرا</h4>
+            <p>حرارة متوسطة مع لون ونكهة دخانية ساحرة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="27">27 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🤎</div>
+            <h4>كمون قصيمي مطحون طازج</h4>
+            <p>مطحون على البارد للحفاظ على كافة الزيوت الطيارة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌿</div>
+            <h4>كزبرة مطحونة فاخرة</h4>
+            <p>عطرية طازجة للتقليات والصلصات والأطباق اليومية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">✨</div>
+            <h4>هيل أخضر مطحون ناعم</h4>
+            <p>مطحون فوري للقهوة العربية والحلويات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="88">88 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🪵</div>
+            <h4>قرفة سيلانية مطحونة</h4>
+            <p>قرفة ناعمة للحلويات والمشروبات والطبخات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="35">35 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">⚫</div>
+            <h4>فلفل أسود مطحون طازج</h4>
+            <p>مطحون بنعومة مثالية وتدرج نكهة حرارية لذيذة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="30">30 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">⚪</div>
+            <h4>فلفل أبيض مطحون</h4>
+            <p>للبشاميل والشوربات البيضاء ومتبلات الدجاج</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="32">32 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🔴</div>
+            <h4>سماق بلدي تركي أصلي</h4>
+            <p>سماق طبيعي بلون عنابي ومذاق حمضي فاقع</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="26">26 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🧄</div>
+            <h4>ثوم بودرة نقي مجفف</h4>
+            <p>ثوم طبيعي مطحون بدون مواد حافظة أو تكتل</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🧅</div>
+            <h4>بصل بودرة طبيعي ذهبي</h4>
+            <p>خلاصة البصل المجفف لنكهة التتبيل السريعة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌾</div>
+            <h4>حلبة مطحونة بلدي</h4>
+            <p>حلبة مطحونة طازجة للحلويات والخلطات الشعبية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🟡</div>
+            <h4>خردل مطحون ناعم</h4>
+            <p>بودرة خردل لصناعة الصوصات وتتبيل المشاوي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">⚫</div>
+            <h4>حبة البركة مطحونة</h4>
+            <p>حبة سوداء مطحونة طازجة لخلطات العسل والصحة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌶️</div>
+            <h4>شطة حارة حلبية مجروشة</h4>
+            <p>رقائق فلفل أحمر زيتية متوازنة الحرارة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🔥</div>
+            <h4>شطة كايين بودرة نارية</h4>
+            <p>حرارة نقية عالية لعشاق الأطباق الحارة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="25">25 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🔥</div>
+            <h4>شطة سودانية حارة مطحونة</h4>
+            <p>شطة بلدية طبيعية فائقة الحدة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌶️</div>
+            <h4>فلفل قرون مجفف حار</h4>
+            <p>قرون الفلفل الأحمر الصغيرة المجففة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍋</div>
+            <h4>لومي أسود مطحون ناعم</h4>
+            <p>ليمون أسود مطحون للكبسات والإيدامات والمرق</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🪵</div>
+            <h4>عرقسوس ناعم أصلي</h4>
+            <p>للمشروبات الرمضانية والحلويات التراثية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌾</div>
+            <h4>كراوية مطحونة</h4>
+            <p>لأطباق الميغلي والشوربات والمعجنات العطرية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🥩</div>
+            <h4>بهار مشاوي ع الفحم ديلوكس</h4>
+            <p>توليفة مخصصة للمشاوي على الفحم والريش والكباب</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="35">35 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🐟</div>
+            <h4>بهار سمك ومأكولات بحرية</h4>
+            <p>نكهة منعشة بالليمون والكزبرة والشمر والكمون</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="32">32 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍗</div>
+            <h4>بهار دجاج مشوي ومحمر</h4>
+            <p>يمنح الدجاج لوناً ذهبياً مقرمشاً ونكهة لا تقاوم</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="30">30 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍳</div>
+            <h4>بهار لحم مقلقل وصاج</h4>
+            <p>بهارات جنوبية عريقة للمقلقل واللحم المحموس</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🥣</div>
+            <h4>بهار شوربة كويكر رمضانية</h4>
+            <p>السر وراء رائحة الشوربة الرمضانية الأصيلة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="26">26 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🥟</div>
+            <h4>بهار سمبوسة حاشي وخضار</h4>
+            <p>توليفة حشوات السمبوسة المقرمشة والمعجنات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌹</div>
+            <h4>دقة مدينية بالورد والكمون</h4>
+            <p>دقة المدينة المنورة التراثية الفاخرة للإفطار</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="25">25 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌿</div>
+            <h4>زعتر فلسطيني بلدي بالسمسم</h4>
+            <p>زعتر بري مجفف مع سماق بلدي وسمسم محمص</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🥜</div>
+            <h4>زعتر حلبي ملوكي بالمكسرات</h4>
+            <p>زعتر فاخر مضاف إليه الفستق واللوز والبهار الحلو</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="38">38 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌿</div>
+            <h4>زعتر أردني أخضر ناعم</h4>
+            <p>نكهة كلاسيكية نقية مع زيت الزيتون البكر</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🧂</div>
+            <h4>ملح هيمالايا وردي ناعم</h4>
+            <p>ملح صخري طبيعي غني بأكثر من 84 معدن</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🧂</div>
+            <h4>ملح هيمالايا وردي خشن</h4>
+            <p>حبيبات الملح الوردي للمطاحن واللحوم المشوية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🧂</div>
+            <h4>ملح بحري مدخن طبيعي</h4>
+            <p>ملح مدخن على خشب الجوز لنكهة شواء طبيعية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="25">25 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍋</div>
+            <h4>ليمون فلفل (ليمون بيبر)</h4>
+            <p>توليفة الفلفل الأسود مع قشور الليمون المجففة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍟</div>
+            <h4>بهار بطاطس وودجز ومقليات</h4>
+            <p>نكهة مقرمشات المطاعم الشهية بالبابريكا والثوم</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍕</div>
+            <h4>توابل أعشاب إيطالية</h4>
+            <p>أوريجانو وريحان وإكليل الجبل وزعتر مجفف</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌿</div>
+            <h4>أوريجانو بري مجفف نقي</h4>
+            <p>عشبة البيتزا والباستا بعبق البحر المتوسط</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="26">26 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌿</div>
+            <h4>ريحان مجفف عالي العطرية</h4>
+            <p>أوراق ريحان خضراء مجففة للصلصات الإيطالية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🌿</div>
+            <h4>إكليل الجبل (روزماري) مجفف</h4>
+            <p>مثالي للحوم المشوية والدجاج والبطاطس بالفرن</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍢</div>
+            <h4>بهار شيش طاووق تركي</h4>
+            <p>تتبيلة الدجاج المشوي باللبن والصلصة والزعتر</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🧆</div>
+            <h4>بهار فلافل بلدي</h4>
+            <p>السر في فلافل مقرمشة هشة برائحة الكمون والكزبرة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🫓</div>
+            <h4>بهار حواوشي مصري</h4>
+            <p>خلطة توابل اللحم داخل الخبز المقرمش</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="25">25 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🧆</div>
+            <h4>بهار كبة شامية</h4>
+            <p>خلطة البرغل واللحم بالقرفة والبهار الحلو والكمون</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🥦</div>
+            <h4>بهار صينية خضار بالفرن</h4>
+            <p>توليفة خفيفة تبرز المذاق الطبيعي للخضار</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍕</div>
+            <h4>بهار لحم بعجين وصفيحة</h4>
+            <p>توابل عطرية خفيفة للفرن والمعجنات الشامية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍲</div>
+            <h4>بديل مرق الدجاج الطبيعي</h4>
+            <p>بهارات أعشاب وخضار بدون جلوتامات أو مواد صناعية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍲</div>
+            <h4>بديل مرق اللحم الطبيعي</h4>
+            <p>بودرة بهارات مركزة طبيعية لإثراء الطبخات والشوربات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🧂</div>
+            <h4>ملح كرفس عطري</h4>
+            <p>ملح ناعم متبل ببذور الكرفس للسلطات والصلصات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🥒</div>
+            <h4>بهار مخللات وتخليل</h4>
+            <p>بذور الكزبرة والخردل والفلفل والشمر للتخليل المنزلي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="16">16 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+            <div class="product-emoji">🍗</div>
+            <h4>تتبيلة أجنحة الدجاج (بافلو)</h4>
+            <p>مزيج توابل حامض وحار للأجنحة المقرمشة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-group reveal" data-category="nuts" id="nuts">
+        <div class="category-section-title">
+          <h2><span style="margin-left: 8px;">🥜</span> مكسرات فاخرة</h2>
+          <span class="cat-count-badge">+22 صنف</span>
+        </div>
+        <div class="products-grid">
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🟢</div>
+            <h4>فستق حلبي محمص ومملح</h4>
+            <p>فستق حلبي إكسترا كبير مفتوح طبيعياً ومحمص بحرفية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="55">55 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🟢</div>
+            <h4>فستق حلبي ني مقشر</h4>
+            <p>حبات خضراء يانعة للحلويات والطبخ وتزيين الأطباق</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="65">65 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🟢</div>
+            <h4>فستق حلبي مدخن</h4>
+            <p>نكهة تدخين خشبية مميزة مع قرمشة استثنائية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="58">58 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🥜</div>
+            <h4>كاجو جامبو محمص ومملح</h4>
+            <p>حجم سوبر جامبو مقرمش غني بالزبدة الطبيعية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="48">48 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🥜</div>
+            <h4>كاجو ني عضوي</h4>
+            <p>كاجو خام طبيعي 100% للأنظمة الصحية والحلويات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="45">45 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🧀</div>
+            <h4>كاجو بنكهة الجبنة المدخنة</h4>
+            <p>نكهة عصرية مقرمشة لعشاق التسالي الفاخرة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="42">42 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">✨</div>
+            <h4>كاجو بالزعفران والهيل</h4>
+            <p>توليفة ملوكية خليجية بنكهة الزعفران الأصلي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="60">60 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🌰</div>
+            <h4>لوز أمريكي محمص ومملح</h4>
+            <p>حبات لوز كاملة مقرمشة بقشرتها البنية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="38">38 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🌰</div>
+            <h4>لوز أمريكي ني كامل</h4>
+            <p>لوز خام نقي غني بالبروتين والدهون الصحية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="36">36 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🌰</div>
+            <h4>لوز شرائح أبيض</h4>
+            <p>شرائح رقيقة لتزيين الأرز والكبسات والحلويات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="42">42 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🌰</div>
+            <h4>لوز بجلي بلدي</h4>
+            <p>لوز حجازي محلي ذو طعم غني وفريد</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="50">50 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🧠</div>
+            <h4>جوز عين جمل شيلي إكسترا</h4>
+            <p>أنصاف عين الجمل الفاتحة الطازجة بدون أي مرارة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="46">46 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">⚪</div>
+            <h4>مكاديميا أسترالية فاخرة</h4>
+            <p>ملكة المكسرات بقوام زبدي مقرمش مملح خفيف</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="75">75 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🌰</div>
+            <h4>بندق تركي مقشر محمص</h4>
+            <p>حبات بندق مستديرة ذهبية محمصة طازجة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="48">48 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🌲</div>
+            <h4>صنوبر بلدي حليبي (باكستاني)</h4>
+            <p>صنوبر حبة طويلة للكبسات والسمبوسة والحشوات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="85">85 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🌰</div>
+            <h4>بيكان أمريكي طبيعي</h4>
+            <p>حبات بيكان بنية غنية بطعم الكراميل الطبيعي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="58">58 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🎃</div>
+            <h4>حب قرع محمص ومملح</h4>
+            <p>بذور اليقطين البيضاء المقرمشة الغنية بالزنك</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🌻</div>
+            <h4>حب دوار الشمس محمص</h4>
+            <p>بذور دوار الشمس الكبيرة بنكهة التحميص البلدي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🌽</div>
+            <h4>ذرة إسبانية محمصة مقرمشة</h4>
+            <p>حبات ذرة عملاقة بنكهة الشواء والملح</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">👑</div>
+            <h4>مشكل مكسرات VIP ملكي</h4>
+            <p>توليفة من الفستق والكاجو والمكاديميا واللوز والبندق</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="65">65 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🍘</div>
+            <h4>مكسرات يابانية وصينية مقرمشة</h4>
+            <p>مقرمشات أرز ومكسرات بنكهة الصويا والأعشاب البحرية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="32">32 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+            <div class="product-emoji">🌰</div>
+            <h4>كستناء تركية طازجة</h4>
+            <p>حبات أبو فروة الفاخرة للشواء في ليالي الشتاء</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="45">45 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-group reveal-blur" data-category="herbs" id="herbs">
+        <div class="category-banner-card">
+          <img src="img_herbs.jpg" alt="أعشاب طبيعية" class="cat-banner-img" loading="lazy" />
+          <div class="cat-banner-overlay"></div>
+          <div class="cat-banner-content">
+            <h2><span>🌿</span> أعشاب طبيعية</h2>
+            <span class="cat-count-badge" style="font-size: 0.95rem; padding: 6px 18px;">+21 نوع</span>
+          </div>
+        </div>
+        <div class="products-grid">
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌼</div>
+            <h4>بابونج زهور طبيعية كاملة</h4>
+            <p>زهور البابونج الذهبية المهدئة للأعصاب والمعدة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌾</div>
+            <h4>يانسون شامي بلدي</h4>
+            <p>بذور عطرية طبيعية لراحة الجهاز الهضمي والنوم الهادئ</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌺</div>
+            <h4>كركديه أسواني فاخر</h4>
+            <p>بتلات الكركديه الياقوتية لنكهة منعشة وضبط الضغط</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🍃</div>
+            <h4>ميرمية جبلية فلسطينية</h4>
+            <p>أوراق الميرمية البرية العطرية لصحة البطن والحلق</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌿</div>
+            <h4>زعتر بري جبلي (دقة وشاي)</h4>
+            <p>زعتر أوراق مجفف برائحة نفاذة ومضاد طبيعي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="25">25 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🪻</div>
+            <h4>لافندر فرنسي معطر (خزامى)</h4>
+            <p>زهور الخزامى البنفسجية للاسترخاء والشاي العطري</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="30">30 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌱</div>
+            <h4>نعناع بلدي حائلي مجفف</h4>
+            <p>أوراق نعناع خضراء مجففة برائحة منعشة وقوية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌿</div>
+            <h4>بردقوش عضوي منقى</h4>
+            <p>عشبة التوازن الهرموني والراحة النفسية والاسترخاء</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌾</div>
+            <h4>حلبة قصيمية بلدية</h4>
+            <p>حلبة نقية لتقوية الجسم ومشروبات الشتاء الدافئة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="16">16 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🍃</div>
+            <h4>لويزة / مليسا مهدئة</h4>
+            <p>عشبة الليمون العطرية لتهدئة القلق والنوم العميق</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="25">25 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌿</div>
+            <h4>إكليل الجبل (روزماري)</h4>
+            <p>أوراق الروزماري العطرية لتنشيط الذاكرة والدورة الدموية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🫚</div>
+            <h4>زنجبيل أعواد مجفف</h4>
+            <p>جذور زنجبيل كاملة لمشروبات المناعة وطرد البرد</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🪵</div>
+            <h4>قرفة سيلانية عيدان خشبية</h4>
+            <p>قرفة سرنديب الفاخرة لتنظيم السكر والدفء</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="32">32 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌸</div>
+            <h4>شوك الجمل (حليب الشوك)</h4>
+            <p>بذور عشبة الكبد الطبيعية لتنقية الجسم من السموم</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="26">26 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🍃</div>
+            <h4>سنا مكي أصلي منقى</h4>
+            <p>أوراق السنا الطبيعية لتنظيف الجهاز الهضمي والقولون</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🪻</div>
+            <h4>خزامى برية نجدية</h4>
+            <p>أزهار عطرية مهدئة وشاي تراثي أصيل</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌾</div>
+            <h4>كراوية حب طبيعية</h4>
+            <p>مهدئة لمغص الأطفال والنفاس ومريحة للأمعاء</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌾</div>
+            <h4>شمر بلدي (حبة حلوة)</h4>
+            <p>للهضم والتخلص من الانتفاخات وصحة التنفس</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🌿</div>
+            <h4>رجل الأسد مجففة</h4>
+            <p>عشبة نسائية تقليدية معروفة لشد الجسم والتنحيف</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🍵</div>
+            <h4>شاي أخضر بالياسمين الملكي</h4>
+            <p>شاي أخضر نقي معطر ببتلات زهور الياسمين الطبيعي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="35">35 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+            <div class="product-emoji">🍵</div>
+            <h4>شاي أبيض فضي نادر (سيلفر نيدل)</h4>
+            <p>أندر أنواع الشاي الأبيض الغني بمضادات الأكسدة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="55">55 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-group reveal-blur" data-category="grains" id="grains">
+        <div class="category-banner-card">
+          <img src="img_grains.jpg" alt="حبوب طازجة" class="cat-banner-img" loading="lazy" />
+          <div class="cat-banner-overlay"></div>
+          <div class="cat-banner-content">
+            <h2><span>🌾</span> حبوب طازجة</h2>
+            <span class="cat-count-badge" style="font-size: 0.95rem; padding: 6px 18px;">11 صنف</span>
+          </div>
+        </div>
+        <div class="products-grid">
+          <div class="product-card reveal-blur" data-category="grains" data-category-name="حبوب طازجة">
+            <div class="product-emoji">⚪</div>
+            <h4>سمسم أبيض بلدي سمح</h4>
+            <p>سمسم أبيض نقي غير محمص عالي الكالسيوم والزيوت</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="grains" data-category-name="حبوب طازجة">
+            <div class="product-emoji">🟡</div>
+            <h4>سمسم محمص ذهبي</h4>
+            <p>محمص برائحة شهية للمعجنات والمخبوزات والحلويات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="grains" data-category-name="حبوب طازجة">
+            <div class="product-emoji">⚫</div>
+            <h4>حبة البركة (الحبة السوداء)</h4>
+            <p>بذور الحبة السوداء النقية للشفاء والمناعة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="25">25 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="grains" data-category-name="حبوب طازجة">
+            <div class="product-emoji">⚫</div>
+            <h4>بذور الشيا العضوية</h4>
+            <p>سوبر فود غني بالأوميغا 3 والألياف للإفطار والمشروبات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="32">32 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="grains" data-category-name="حبوب طازجة">
+            <div class="product-emoji">🟡</div>
+            <h4>بذور الكتان الذهبية</h4>
+            <p>بذور غنية بالألياف الطبيعية لدعم صحة القلب والهضم</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="24">24 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="grains" data-category-name="حبوب طازجة">
+            <div class="product-emoji">🟤</div>
+            <h4>بذور الكتان البنية</h4>
+            <p>بذور منتقاة بعناية للأنظمة الغذائية الصحية والخبز</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="grains" data-category-name="حبوب طازجة">
+            <div class="product-emoji">⚪</div>
+            <h4>كينوا بيضاء بيروفية عضوية</h4>
+            <p>بديل الأرز الصحي الخالي من الغلوتين عالي البروتين</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="38">38 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="grains" data-category-name="حبوب طازجة">
+            <div class="product-emoji">🔴</div>
+            <h4>كينوا حمراء عضوية</h4>
+            <p>قوام مقرمش ونكهة مكسرات لذيذة للسلطات المتنوعة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="42">42 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="grains" data-category-name="حبوب طازجة">
+            <div class="product-emoji">🌾</div>
+            <h4>دخن بلدي حجازي</h4>
+            <p>حبوب الدخن التراثية الغنية بالمعادن للخبز والعصيدة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="16">16 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="grains" data-category-name="حبوب طازجة">
+            <div class="product-emoji">🥣</div>
+            <h4>شوفان حبة كاملة عضوي</h4>
+            <p>رقائق الشوفان الكاملة للإفطار الصحي والشوربات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="grains" data-category-name="حبوب طازجة">
+            <div class="product-emoji">🌾</div>
+            <h4>برغل تركي ناعم وخشن</h4>
+            <p>برغل منتقى ممتاز للتبولة والكبة والأطباق الشامية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="15">15 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-group reveal-blur" data-category="legumes" id="legumes">
+        <div class="category-banner-card">
+          <img src="img_legumes.jpg" alt="بقوليات منتقاة" class="cat-banner-img" loading="lazy" />
+          <div class="cat-banner-overlay"></div>
+          <div class="cat-banner-content">
+            <h2><span>🫘</span> بقوليات منتقاة</h2>
+            <span class="cat-count-badge" style="font-size: 0.95rem; padding: 6px 18px;">12 صنف</span>
+          </div>
+        </div>
+        <div class="products-grid">
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">🟡</div>
+            <h4>عدس أصفر تركي مجروش</h4>
+            <p>عدس سريع الطهي بلون ذهبي للشوربة الشتوية اللذيذة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="14">14 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">🔴</div>
+            <h4>عدس أحمر مجروش فاخر</h4>
+            <p>عدس غني بالبروتين والحديد مثالي للمرق والشوربات</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="16">16 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">🟤</div>
+            <h4>عدس بني بلدي (أبو جبة)</h4>
+            <p>عدس كامل بقشرته لأطباق الكشري والمجدرة التراثية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="15">15 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">🟡</div>
+            <h4>حمص حب ممتاز (حجم جامبو)</h4>
+            <p>حبات حمص كبيرة وسريعة النضج للحمص بالطحينة والبليلة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">⚪</div>
+            <h4>فاصوليا بيضاء عريضة إكسترا</h4>
+            <p>فاصوليا جافة حبة كبيرة زبدية القوام للطبخ</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">🔴</div>
+            <h4>فاصوليا حمراء كيدني</h4>
+            <p>حبوب الفاصوليا الحمراء للسلطات والمأكولات المكسيكية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">🟤</div>
+            <h4>فول مدمس بلدي حبة صغيرة</h4>
+            <p>فول أصيل للتدميس المنزلي بقوام كريمي زكي</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="16">16 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">⚪</div>
+            <h4>لوبيا عين سوداء منتقاة</h4>
+            <p>لوبيا بلدية سريعة النضج للإيدامات والصلصات الحمراء</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">🟢</div>
+            <h4>بازلاء خضراء مجففة</h4>
+            <p>بازلاء مجففة نقية لصناعة الشوربة الخضراء المغذية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="16">16 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">🟡</div>
+            <h4>ترمس حلو سريع التحضير</h4>
+            <p>ترمس محمص للتسالي الصحية الغنية بالبروتين</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="20">20 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">🟡</div>
+            <h4>ترمس مر بلدي علاجي</h4>
+            <p>ترمس مر تراثي معروف بفوائده للبشرة والشعر والسكر</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="legumes" data-category-name="بقوليات منتقاة">
+            <div class="product-emoji">🟢</div>
+            <h4>ماش أخضر منقى</h4>
+            <p>حبوب الماش الخضراء للشوربات والأرز والدفء في الشتاء</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="18">18 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-group reveal-blur" data-category="honey" id="honey">
+        <div class="category-banner-card">
+          <img src="img_honey.jpg" alt="عسل ملكي طبيعي" class="cat-banner-img" loading="lazy" />
+          <div class="cat-banner-overlay"></div>
+          <div class="cat-banner-content">
+            <h2><span>🍯</span> عسل ملكي طبيعي</h2>
+            <span class="cat-count-badge" style="font-size: 0.95rem; padding: 6px 18px;">10 أصناف</span>
+          </div>
+        </div>
+        <div class="products-grid">
+          <div class="product-card reveal-blur" data-category="honey" data-category-name="عسل ملكي طبيعي">
+            <div class="product-emoji">🍯</div>
+            <h4>عسل سدر ملكي دوعني فاخر</h4>
+            <p>عسل سدر يمني أصيل من وادي دوعن برائحة السدر النفاذة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="190">190 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="honey" data-category-name="عسل ملكي طبيعي">
+            <div class="product-emoji">🍯</div>
+            <h4>عسل سدر بلدي جبلي</h4>
+            <p>عسل نقي من أشجار السدر في جبال المملكة الشامخة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="160">160 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="honey" data-category-name="عسل ملكي طبيعي">
+            <div class="product-emoji">🍯</div>
+            <h4>عسل طلح شوكي بري</h4>
+            <p>عسل شجرة الطلح الداكن ذو الطعم اللاذع المميز والمناعة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="175">175 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="honey" data-category-name="عسل ملكي طبيعي">
+            <div class="product-emoji">🍯</div>
+            <h4>عسل سمر حضرمي نقي</h4>
+            <p>عسل بلون أحمر عنبري داكن غني بالمعادن ومفيد للمعدة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="150">150 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="honey" data-category-name="عسل ملكي طبيعي">
+            <div class="product-emoji">🍯</div>
+            <h4>عسل مجرى أبيض قرغيزي نادر</h4>
+            <p>عسل أبيض ثلجي كريمي بنكهة زهرية ناعمة استثنائية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="220">220 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="honey" data-category-name="عسل ملكي طبيعي">
+            <div class="product-emoji">🍯</div>
+            <h4>عسل زهور برية جبلية</h4>
+            <p>رحيق أزهار الربيع الجبلية بنكهة خفيفة ومحببة للعائلة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="130">130 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="honey" data-category-name="عسل ملكي طبيعي">
+            <div class="product-emoji">🍯</div>
+            <h4>عسل حبة البركة الطبيعي</h4>
+            <p>عسل النحل المغذى على رحيق زهور الحبة السوداء</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="140">140 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="honey" data-category-name="عسل ملكي طبيعي">
+            <div class="product-emoji">🍯</div>
+            <h4>عسل الغابة السوداء الألماني</h4>
+            <p>عسل ندوة عسلية داكن غني بالأملاح المعدنية ومضادات الأكسدة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="165">165 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="honey" data-category-name="عسل ملكي طبيعي">
+            <div class="product-emoji">👑</div>
+            <h4>غذاء ملكات النحل الصافي 100%</h4>
+            <p>مادة مركزة فائقة القوة لتعزيز النشاط والحيوية والطاقة</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="280">280 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="honey" data-category-name="عسل ملكي طبيعي">
+            <div class="product-emoji">🐝</div>
+            <h4>عكبر النحل الطبيعي (بروبوليس)</h4>
+            <p>المضاد الحيوي الطبيعي الأقوى لدعم المناعة والشفاء</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="240">240 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-group reveal-blur" data-category="candy" id="candy">
+        <div class="category-banner-card">
+          <img src="img_candy.jpg" alt="كاندي وحلويات شرقية" class="cat-banner-img" loading="lazy" />
+          <div class="cat-banner-overlay"></div>
+          <div class="cat-banner-content">
+            <h2><span>🍬</span> كاندي وحلويات شرقية</h2>
+            <span class="cat-count-badge" style="font-size: 0.95rem; padding: 6px 18px;">10 أصناف</span>
+          </div>
+        </div>
+        <div class="products-grid">
+          <div class="product-card reveal-blur" data-category="candy" data-category-name="كاندي وحلويات شرقية">
+            <div class="product-emoji">🍬</div>
+            <h4>حلقوم تركي بالرمان والفستق الحلبي</h4>
+            <p>راحة حلقوم إسطنبولية فاخرة محشوة بالفستق المقرمش</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="42">42 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="candy" data-category-name="كاندي وحلويات شرقية">
+            <div class="product-emoji">🪵</div>
+            <h4>ملبن جوز مبروم (سجق الجوز)</h4>
+            <p>حلوى الجوز التقليدية المغلفة بدبس العنب والرمان</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="48">48 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="candy" data-category-name="كاندي وحلويات شرقية">
+            <div class="product-emoji">🌸</div>
+            <h4>راحة الحلقوم بالمستكة وماء الورد</h4>
+            <p>نكهة تراثية عطرية بقوام طري يذوب في الفم</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="38">38 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="candy" data-category-name="كاندي وحلويات شرقية">
+            <div class="product-emoji">🥜</div>
+            <h4>نوغا بالفستق والعسل الطبيعي</h4>
+            <p>حلوى النوغا البيضاء الفاخرة المحمّلة بالفستق المحمص</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="52">52 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="candy" data-category-name="كاندي وحلويات شرقية">
+            <div class="product-emoji">☕</div>
+            <h4>سكاكر عربية محشوة بالهيل والزعفران</h4>
+            <p>حبات حلوى تراثية مميزة لضيافة القهوة العربية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="candy" data-category-name="كاندي وحلويات شرقية">
+            <div class="product-emoji">🍯</div>
+            <h4>مصاصات عسل طبيعي للأطفال</h4>
+            <p>حلوى صحية مصنوعة من العسل الصافي لتهدئة الحلق</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="25">25 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="candy" data-category-name="كاندي وحلويات شرقية">
+            <div class="product-emoji">🍑</div>
+            <h4>قمر الدين مشمشي دمشقي فاخر</h4>
+            <p>شرائح مشمش طبيعية نقية للعصائر والتحلية الرمضانية</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="35">35 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="candy" data-category-name="كاندي وحلويات شرقية">
+            <div class="product-emoji">🟤</div>
+            <h4>تين مجفف جبلي طبيعي</h4>
+            <p>حبات تين طرية معسلة طبيعياً بدون سكر مضاف</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="30">30 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="candy" data-category-name="كاندي وحلويات شرقية">
+            <div class="product-emoji">🟡</div>
+            <h4>مشمش تركي مجفف جامبو</h4>
+            <p>مشمش ذهبي طري غني بفيتامين A والألياف</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="32">32 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+          <div class="product-card reveal-blur" data-category="candy" data-category-name="كاندي وحلويات شرقية">
+            <div class="product-emoji">🍓</div>
+            <h4>كاندي فواكه جيلاتين حلال فاخر</h4>
+            <p>توت وفراولة وأشكال مرحة بجيلاتين بقري حلال 100%</p>
+            <div class="product-card-bottom">
+              <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+              <button class="btn-add-cart">أضف للسلة 🛒</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Slide-Over Cart Drawer -->
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="سلة التسوق">
+    <div class="cart-header">
+      <h3><span>🛒</span> سلة المشتريات</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="إغلاق السلة">✕</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>مجموع المنتجات:</span>
+        <span id="cart-subtotal" style="font-weight: 700;">0 ر.س</span>
+      </div>
+      <div class="cart-shipping-row">
+        <span>تكلفة الشحن التقديرية:</span>
+        <span id="cart-shipping">25 ر.س (أرامكس)</span>
+      </div>
+      <div class="cart-total-row">
+        <span>الإجمالي النهائي:</span>
+        <span id="cart-total">0 ر.س</span>
+      </div>
+      <button class="cart-checkout-btn" id="cart-checkout-btn">
+        <span>إتمام الطلب والدفع</span> 💳
+      </button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div class="checkout-modal-backdrop" id="checkout-modal-backdrop">
+    <div class="checkout-modal" id="checkout-modal">
+      <button class="checkout-close-btn" id="checkout-close-btn" aria-label="إغلاق">✕</button>
+
+      <div class="checkout-steps-nav">
+        <div class="step-indicator active"><span class="step-num">1</span> العنوان والشحن</div>
+        <div class="step-indicator active"><span class="step-num">2</span> الدفع الإلكتروني</div>
+      </div>
+
+      <form id="checkout-form">
+        <div class="checkout-section-title"><span>📍</span> بيانات المستلم والعنوان</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>الاسم الكامل *</label>
+            <input type="text" name="customer_name" required placeholder="مثال: أحمد عبد الله" value="أحمد عبد الله" />
+          </div>
+          <div class="form-group">
+            <label>رقم الجوال *</label>
+            <input type="tel" name="customer_phone" required placeholder="05XXXXXXXX" value="0501234567" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>المدينة *</label>
+            <select name="customer_city">
+              <option value="الرياض">الرياض</option>
+              <option value="جدة">جدة</option>
+              <option value="مكة المكرمة">مكة المكرمة</option>
+              <option value="المدينة المنورة">المدينة المنورة</option>
+              <option value="الدمام والخبر">الدمام والخبر</option>
+              <option value="بريدة وعنيزة">القصيم (بريدة / عنيزة)</option>
+              <option value="أبها وخميس مشيط">عسير (أبها / الخميس)</option>
+              <option value="مدينة أخرى">مدينة أخرى بالمملكة</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>الحي والشارع *</label>
+            <input type="text" name="customer_address" required placeholder="الحي، اسم الشارع، رقم المبنى" value="حي الملقا، طريق الملك فهد" />
+          </div>
+        </div>
+
+        <div class="checkout-section-title"><span>🚚</span> اختر شركة الشحن والتوصيل</div>
+        <div class="shipping-options-grid">
+          <label class="shipping-card selected">
+            <input type="radio" name="shipping_method" data-name="أرامكس (Aramex)" data-price="25" data-time="1-3 أيام عمل" checked />
+            <span class="shipping-icon">🚚</span>
+            <div class="shipping-details">
+              <span class="shipping-name">أرامكس (Aramex)</span>
+              <span class="shipping-time">توصيل لباب البيت (1-3 أيام)</span>
+            </div>
+            <span class="shipping-price">25 ر.س</span>
+          </label>
+
+          <label class="shipping-card">
+            <input type="radio" name="shipping_method" data-name="سمسا إكسبريس (SMSA)" data-price="28" data-time="1-2 أيام عمل" />
+            <span class="shipping-icon">📦</span>
+            <div class="shipping-details">
+              <span class="shipping-name">سمسا (SMSA)</span>
+              <span class="shipping-time">سريع لجميع المدن (1-2 يوم)</span>
+            </div>
+            <span class="shipping-price">28 ر.س</span>
+          </label>
+
+          <label class="shipping-card">
+            <input type="radio" name="shipping_method" data-name="خزائن ريد بوكس (RedBox)" data-price="15" data-time="2-4 أيام" />
+            <span class="shipping-icon">📮</span>
+            <div class="shipping-details">
+              <span class="shipping-name">ريد بوكس (RedBox)</span>
+              <span class="shipping-time">خزائن ذكية استلام ذاتي</span>
+            </div>
+            <span class="shipping-price">15 ر.س</span>
+          </label>
+
+          <label class="shipping-card">
+            <input type="radio" name="shipping_method" data-name="توصيل سريع نفس اليوم" data-price="35" data-time="خلال ساعات" />
+            <span class="shipping-icon">⚡</span>
+            <div class="shipping-details">
+              <span class="shipping-name">توصيل نفس اليوم</span>
+              <span class="shipping-time">الرياض وجدة فقط</span>
+            </div>
+            <span class="shipping-price">35 ر.س</span>
+          </label>
+        </div>
+
+        <div class="checkout-section-title"><span>💳</span> طريقة الدفع</div>
+        <div class="payment-tabs">
+          <button type="button" class="payment-tab-btn active" data-method="visa">💳 بطاقة فيزا / مدى (تجريبي)</button>
+          <button type="button" class="payment-tab-btn" data-method="cod">💵 الدفع عند الاستلام</button>
+          <button type="button" class="payment-tab-btn" data-method="applepay">🍏 Apple Pay</button>
+        </div>
+
+        <div id="visa-payment-section">
+          <div class="dummy-card-wrapper">
+            <div class="dummy-card-top">
+              <div class="card-chip"></div>
+              <div class="card-brand-logo">VISA / Mada</div>
+            </div>
+            <div class="card-number-preview" id="card-number-preview">4242 •••• •••• 4242</div>
+            <div class="dummy-card-bottom">
+              <div class="card-holder-name" id="card-holder-preview">AHMAD ABDULLAH</div>
+              <div class="card-expiry-preview" id="card-expiry-preview">12/28</div>
+            </div>
+          </div>
+
+          <button type="button" class="dummy-autofill-btn" id="dummy-autofill-btn">
+            ⚡ اضغط هنا لتعبئة بطاقة فيزا تجريبية للتجربة السريعة بنقرة واحدة
+          </button>
+
+          <div class="form-group">
+            <label>رقم البطاقة</label>
+            <input type="text" id="card-number-input" placeholder="4242 4242 4242 4242" value="4242 8890 2026 4242" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>تاريخ الانتهاء</label>
+              <input type="text" id="card-expiry-input" placeholder="MM/YY" value="12/28" />
+            </div>
+            <div class="form-group">
+              <label>رمز الأمان (CVV)</label>
+              <input type="password" id="card-cvv-input" placeholder="•••" value="849" maxlength="4" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>اسم حامل البطاقة</label>
+            <input type="text" id="card-holder-input" placeholder="كما هو مكتوب على البطاقة" value="AHMAD ABDULLAH" />
+          </div>
+        </div>
+
+        <div id="cod-payment-section" style="display: none; padding: 20px; background: rgba(255,255,255,0.03); border: 1px dashed var(--border); border-radius: 12px; margin-bottom: 20px;">
+          <p style="font-size: 0.92rem; color: var(--gold);">💵 الدفع عند الاستلام متاح لجميع مدن المملكة. ستقوم بدفع المبلغ نقداً أو بالشبكة لمندوب الشحن عند استلام الطرد.</p>
+        </div>
+
+        <div id="applepay-payment-section" style="display: none; padding: 20px; background: rgba(255,255,255,0.03); border: 1px dashed var(--border); border-radius: 12px; margin-bottom: 20px; text-align: center;">
+          <p style="font-size: 0.95rem; color: #fff; margin-bottom: 12px;">🍏 يمكنك الدفع بضغطة واحدة باستخدام Apple Pay على أجهزة آبل المتوافقة.</p>
+          <div style="background: #000; border: 1px solid #444; border-radius: 10px; padding: 12px; display: inline-block; font-size: 1.1rem; font-weight: 700; width: 220px;">Pay with Apple Pay</div>
+        </div>
+
+        <div style="background: rgba(0,0,0,0.25); border-radius: 14px; padding: 18px; margin-bottom: 24px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+            <span>المنتجات:</span>
+            <span id="checkout-summary-subtotal">0 ر.س</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+            <span>الشحن:</span>
+            <span id="checkout-summary-shipping">25 ر.س (أرامكس)</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 700; color: var(--gold); border-top: 1px dashed rgba(201,168,76,0.3); padding-top: 8px;">
+            <span>المجموع النهائي:</span>
+            <span id="checkout-summary-total">0 ر.س</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; padding: 16px; font-size: 1.1rem; font-weight: 700;">
+          تأكيد الطلب والدفع الآن 🚀
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Success Receipt Modal -->
+  <div class="checkout-modal-backdrop" id="order-success-backdrop">
+    <div class="checkout-modal" style="max-width: 540px;">
+      <div class="order-success-card">
+        <div class="success-checkmark">✓</div>
+        <h2 style="font-size: 1.6rem; color: #fff; margin-bottom: 6px;">تم تأكيد طلبك بنجاح!</h2>
+        <span class="order-id-badge" id="success-order-id">رقم الطلب: #HC-84920</span>
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 20px;">شكراً لتسوقك من Al Hassan Coffee. تم استلام طلبك وجاري تجهيزه للشحن فوراً.</p>
+
+        <div class="receipt-box">
+          <div class="receipt-row">
+            <span>الاسم:</span>
+            <strong id="success-customer-name">أحمد عبد الله</strong>
+          </div>
+          <div class="receipt-row">
+            <span>شركة الشحن:</span>
+            <strong id="success-shipping-company">أرامكس (Aramex)</strong>
+          </div>
+          <div class="receipt-row">
+            <span>طريقة الدفع:</span>
+            <strong id="success-payment-method">بطاقة فيزا تجريبية</strong>
+          </div>
+          <div class="receipt-row total">
+            <span>المبلغ الإجمالي المدفوع:</span>
+            <strong id="success-total-paid">0 ر.س</strong>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+          <a href="#" id="success-whatsapp-btn" target="_blank" class="btn-primary" style="background: linear-gradient(135deg, #25d366, #128c7e); border: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <span>إرسال تفاصيل الفاتورة لواتساب المتجر</span> 💬
+          </a>
+          <button type="button" id="order-success-close-btn" class="btn-ghost" style="width: 100%;">
+            متابعة التسوق في المتجر
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Detail Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-container">
+      <button class="modal-close" aria-label="إغلاق">✕</button>
+      <div class="modal-header">
+        <div class="modal-emoji">✨</div>
+        <span class="modal-category">صنف فاخر</span>
+        <h3 class="modal-title">اسم المنتج</h3>
+      </div>
+      <p class="modal-desc">وصف المنتج</p>
+      
+      <div class="modal-weight-selector">
+        <label>اختر الوزن المطلوب:</label>
+        <div class="weight-options">
+          <button class="weight-btn" data-weight="250 جم">250 جم</button>
+          <button class="weight-btn active" data-weight="500 جم">500 جم</button>
+          <button class="weight-btn" data-weight="1 كجم">1 كجم</button>
+          <button class="weight-btn" data-weight="طلب بالجملة">طلب جملة 📦</button>
+        </div>
+      </div>
+
+      <div class="modal-actions" style="display: flex; gap: 10px;">
+        <button class="btn-primary modal-add-to-cart" style="flex: 1;">أضف للسلة 🛒</button>
+        <a href="#" target="_blank" class="btn-ghost btn-whatsapp-order" style="flex: 1; text-align: center;">طلب واتساب 💬</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/966500000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20Al%20Hassan%20Coffee%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <span>💬</span>
+    <span class="whatsapp-tooltip">تواصل معنا مباشرة عبر واتساب</span>
+  </a>
+
+  <!-- Mobile Bottom Bar -->
+  <nav class="mobile-bottom-bar" aria-label="شريط الجوال السفلي">
+    <ul class="mobile-nav-items">
+      <li>
+        <a href="index.html" class="mobile-nav-link">
+          <span class="mobile-nav-icon">🏠</span>
+          <span>الرئيسية</span>
+        </a>
+      </li>
+      <li>
+        <a href="products.html" class="mobile-nav-link active">
+          <span class="mobile-nav-icon">🛍️</span>
+          <span>المنتجات</span>
+        </a>
+      </li>
+      <li>
+        <button class="mobile-nav-link" id="mobile-cart-btn" aria-label="السلة">
+          <span class="mobile-nav-icon">🛒</span>
+          <span class="mobile-cart-badge cart-badge">0</span>
+          <span>السلة</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="mobile-nav-link" id="mobile-chat-btn" aria-label="المساعد الذكي">
+          <span class="mobile-nav-icon">🤖</span>
+          <span>المساعد</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="chatbot-overlay" id="chatbot-overlay"></div>
+  <button class="chatbot-fab" id="chatbot-fab" aria-label="المساعد الذكي">
+    🤖
+    <span class="fab-badge">1</span>
+  </button>
+  <div class="chatbot-window" id="chatbot-window">
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div class="chat-header-info">
+        <h4>مساعد الحسن الذكي</h4>
+        <p><span class="chat-status-dot"></span> متاح الآن – اسألني عن أي منتج</p>
+      </div>
+      <div class="chat-header-actions">
+        <button class="chat-action-btn" id="chat-fullscreen-btn" title="ملء الشاشة">⛶</button>
+        <button class="chat-action-btn" id="chat-close-btn" title="إغلاق">✕</button>
+      </div>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="quick-replies" id="quick-replies"></div>
+    <div class="chat-input-area">
+      <textarea class="chat-input" id="chat-input" placeholder="اكتب سؤالك هنا…" rows="1"></textarea>
+      <button class="chat-send-btn" id="chat-send-btn" aria-label="إرسال">➤</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo-col">
+        <img src="logo1.jpeg" alt="Al Hassan Coffee" class="footer-logo" />
+        <p>وجهتك الأولى للقهوة العربية والبهارات والأعشاب والمكسرات الفاخرة</p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-link">📸</a>
+          <a href="https://wa.me/966500000000" target="_blank" aria-label="WhatsApp" class="social-link">💬</a>
+          <a href="#" aria-label="Twitter" class="social-link">🐦</a>
+          <a href="#" aria-label="Snapchat" class="social-link">👻</a>
+        </div>
+      </div>
+      <div class="footer-links-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="products.html">المنتجات</a></li>
+          <li><a href="categories.html">الأصناف</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-categories-col">
+        <h4>أصنافنا</h4>
+        <ul>
+          <li><a href="products.html#coffee">قهوة عربية</a></li>
+          <li><a href="products.html#spices">بهارات (+90 صنف)</a></li>
+          <li><a href="products.html#grains">حبوب</a></li>
+          <li><a href="products.html#legumes">بقوليات</a></li>
+          <li><a href="products.html#nuts">مكسرات (+22 صنف)</a></li>
+          <li><a href="products.html#honey">عسل</a></li>
+          <li><a href="products.html#candy">كاندي</a></li>
+          <li><a href="products.html#herbs">أعشاب (+21 نوع)</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h4>خدمة العملاء</h4>
+        <ul class="contact-list">
+          <li>📍 المملكة العربية السعودية</li>
+          <li>📞 +966 50 000 0000</li>
+          <li>✉️ info@alhassancoffee.com</li>
+          <li>🕐 يومياً: 9ص - 11م</li>
+          <li>🚚 شحن لجميع مناطق المملكة</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Al Hassan Coffee. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

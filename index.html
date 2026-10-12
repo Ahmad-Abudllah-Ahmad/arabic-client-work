@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al Hassan Coffee | القهوة العربية والبهارات الفاخرة</title>
+  <meta name="description" content="Al Hassan Coffee - متجر القهوة العربية والبهارات والأعشاب والمكسرات الفاخرة. سلة تسوق إلكترونية، دفع عند الاستلام، دفع فيزا تجريبي، وتوصيل عبر أرامكس وسمسا." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <img src="logo1.jpeg" alt="Al Hassan Coffee" class="preloader-logo" />
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    </div>
+  </div>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html"><img src="logo1.jpeg" alt="Al Hassan Coffee" /></a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+        <li><a href="products.html" class="nav-link">المنتجات</a></li>
+        <li><a href="categories.html" class="nav-link">الأصناف</a></li>
+        <li><a href="about.html" class="nav-link">من نحن</a></li>
+        <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-chat-btn" id="nav-chat-btn" aria-label="المساعد الذكي" title="المساعد الذكي – اسأل عن المنتجات">
+          🤖
+        </button>
+
+        <!-- Cart Button with Count Badge -->
+        <button class="nav-cart-btn" id="nav-cart-btn" aria-label="سلة المشتريات" title="سلة المشتريات">
+          🛒
+          <span class="cart-badge">0</span>
+        </button>
+        <a href="https://wa.me/966500000000" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 0.88rem;">واتساب 💬</a>
+        <button class="hamburger" id="hamburger" aria-label="قائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Slide Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="products.html">المنتجات (سلة وشراء)</a></li>
+      <li><a href="categories.html">الأصناف الرئيسية</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+      <li><a href="https://instagram.com" target="_blank">انستغرام @alhassancoffee 📸</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Sliding Window (Full Screen Images) -->
+  <section class="hero" id="hero">
+    <div class="hero-slider" id="hero-slider">
+
+      <div class="slide slide-1 active">
+        <img src="img_coffee.jpg" alt="القهوة العربية الأصيلة" class="slide-bg-img" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">منذ الأزل</span>
+          <h1 class="slide-title">القهوة العربية<br /><span class="gold">الأصيلة</span></h1>
+          <p class="slide-desc">تجربة فريدة من أجود أنواع البن العربي المحمص بعناية فائقة وتوليفات الهيل الملكية</p>
+          <div class="slide-actions">
+            <a href="products.html#coffee" class="btn-primary">اكتشف القهوة</a>
+            <a href="categories.html" class="btn-ghost">جميع الأصناف</a>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <div class="floating-orb orb-1"></div>
+          <div class="floating-orb orb-2"></div>
+        </div>
+      </div>
+
+      <div class="slide slide-2">
+        <img src="img_spices.jpg" alt="بهارات فاخرة" class="slide-bg-img" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">+90 صنف</span>
+          <h1 class="slide-title">بهارات<br /><span class="gold">فاخرة</span></h1>
+          <p class="slide-desc">أكثر من 90 صنفاً من البهارات الشرقية الطازجة المطحونة على البارد للكبسات والمشاوي</p>
+          <div class="slide-actions">
+            <a href="products.html#spices" class="btn-primary">تصفّح البهارات</a>
+            <a href="categories.html" class="btn-ghost">جميع الأصناف</a>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <div class="floating-orb orb-1"></div>
+          <div class="floating-orb orb-2"></div>
+        </div>
+      </div>
+
+      <div class="slide slide-3">
+        <img src="img_honey.jpg" alt="عسل ملكي نقي" class="slide-bg-img" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">طبيعي 100%</span>
+          <h1 class="slide-title">عسل<br /><span class="gold">ملكي نقي</span></h1>
+          <p class="slide-desc">أفخر أنواع العسل البري والدوعني والطلح من خلايا النحل الجبلية النقية</p>
+          <div class="slide-actions">
+            <a href="products.html#honey" class="btn-primary">اكتشف العسل</a>
+            <a href="categories.html" class="btn-ghost">جميع الأصناف</a>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <div class="floating-orb orb-1"></div>
+          <div class="floating-orb orb-2"></div>
+        </div>
+      </div>
+
+      <div class="slide slide-4">
+        <img src="img_herbs.jpg" alt="أعشاب طبيعية شافية" class="slide-bg-img" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">+20 نوع</span>
+          <h1 class="slide-title">أعشاب<br /><span class="gold">شافية</span></h1>
+          <p class="slide-desc">أكثر من 20 نوعاً من الأعشاب الطبيعية والزهور العطرية لصحتك وراحتك اليومية</p>
+          <div class="slide-actions">
+            <a href="products.html#herbs" class="btn-primary">تصفّح الأعشاب</a>
+            <a href="categories.html" class="btn-ghost">جميع الأصناف</a>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <div class="floating-orb orb-1"></div>
+          <div class="floating-orb orb-2"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="slider-btn slider-prev" id="slider-prev" aria-label="السابق">&#10094;</button>
+    <button class="slider-btn slider-next" id="slider-next" aria-label="التالي">&#10095;</button>
+    <div class="slider-dots" id="slider-dots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>مرر للأسفل</span>
+    </div>
+  </section>
+
+  <!-- Shipping Companies Banner Strip -->
+  <section class="shipping-partners-strip">
+    <div class="partners-container">
+      <div class="partner-badge">
+        <span class="partner-icon">🚚</span>
+        <div>
+          <span>شحن سريع مع أرامكس</span>
+          <small style="display:block; opacity: 0.6; font-size: 0.72rem;">توصيل لباب بيتك (1-3 أيام)</small>
+        </div>
+      </div>
+      <div class="partner-badge">
+        <span class="partner-icon">📦</span>
+        <div>
+          <span>سمسا إكسبريس (SMSA)</span>
+          <small style="display:block; opacity: 0.6; font-size: 0.72rem;">تغطية لجميع مدن وقرى المملكة</small>
+        </div>
+      </div>
+      <div class="partner-badge">
+        <span class="partner-icon">📮</span>
+        <div>
+          <span>خزائن ريد بوكس الذكية</span>
+          <small style="display:block; opacity: 0.6; font-size: 0.72rem;">استلام ذاتي 24/7 بسعر مخفض</small>
+        </div>
+      </div>
+      <div class="partner-badge">
+        <span class="partner-icon">💳</span>
+        <div>
+          <span>دفع آمن بالفيزا وعند الاستلام</span>
+          <small style="display:block; opacity: 0.6; font-size: 0.72rem;">Visa / Mada / Apple Pay / COD</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Stats Bar -->
+  <section class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-item">
+        <span class="stat-num" data-target="90">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">صنف بهارات فاخرة</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="22">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">صنف مكسرات محمصة</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="21">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">نوع أعشاب طبيعية</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="8">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">أقسام رئيسية متكاملة</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products with E-Commerce Price & Add-to-Cart -->
+  <section class="products-section" style="padding-top: 40px;">
+    <div class="products-container">
+      <div class="section-header">
+        <span class="section-badge">الأكثر طلباً</span>
+        <h2 class="section-title">مختارات <span class="gold">Al Hassan</span> المميزة</h2>
+        <p class="section-subtitle">أصناف مختارة بعناية فائقة، اطلبها الآن مباشرة وأضفها لسلتك بضغطة واحدة</p>
+        <div class="title-ornament">
+          <div class="ornament-line"></div>
+          <div class="ornament-diamond"></div>
+          <div class="ornament-line"></div>
+        </div>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card reveal-blur" data-category="coffee" data-category-name="قهوة عربية">
+          <div class="product-img-wrap">
+            <img src="img_coffee.jpg" alt="خلطة الحسن الملكية" loading="lazy" />
+            <span class="product-badge-overlay">الأكثر مبيعاً 🔥</span>
+          </div>
+          <h4>خلطة الحسن الملكية</h4>
+          <p>خلطة فاخرة بالهيل الهندي والزعفران والمستكة بأعلى درجات الإتقان</p>
+          <div class="product-card-bottom">
+            <div class="product-price" data-price="48">48 <span>ر.س</span></div>
+            <button class="btn-add-cart">أضف للسلة 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+          <div class="product-img-wrap">
+            <img src="img_spices.jpg" alt="بهار كبسة سعودي فاخر" loading="lazy" />
+            <span class="product-badge-overlay">طازج 🌶️</span>
+          </div>
+          <h4>بهار كبسة سعودي فاخر</h4>
+          <p>توليفة بهارات الكبسة العريقة مع اللومي وقرفة سرنديب لنكهة لا تقاوم</p>
+          <div class="product-card-bottom">
+            <div class="product-price" data-price="28">28 <span>ر.س</span></div>
+            <button class="btn-add-cart">أضف للسلة 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal-blur" data-category="spices" data-category-name="بهارات فاخرة">
+          <div class="product-img-wrap">
+            <img src="img_spices.jpg" alt="هيل هندي أخضر جامبو رقم 1" loading="lazy" />
+            <span class="product-badge-overlay">رقم 1 ✨</span>
+          </div>
+          <h4>هيل هندي أخضر جامبو رقم 1</h4>
+          <p>حبات هيل خضراء ممتلئة بأعلى تركيز عطري وزيتي من مزارع كيرلا</p>
+          <div class="product-card-bottom">
+            <div class="product-price" data-price="85">85 <span>ر.س</span></div>
+            <button class="btn-add-cart">أضف للسلة 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+          <div class="product-img-wrap">
+            <img src="img_nuts.jpg" alt="مشكل مكسرات VIP ملكي" loading="lazy" />
+            <span class="product-badge-overlay">محمص يومياً 🥜</span>
+          </div>
+          <h4>مشكل مكسرات VIP ملكي</h4>
+          <p>توليفة محمصة طازجة من الفستق والكاجو والمكاديميا واللوز والبندق</p>
+          <div class="product-card-bottom">
+            <div class="product-price" data-price="65">65 <span>ر.س</span></div>
+            <button class="btn-add-cart">أضف للسلة 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal-blur" data-category="nuts" data-category-name="مكسرات فاخرة">
+          <div class="product-img-wrap">
+            <img src="img_nuts.jpg" alt="فستق حلبي محمص ومملح" loading="lazy" />
+            <span class="product-badge-overlay">فاخر 🟢</span>
+          </div>
+          <h4>فستق حلبي محمص ومملح</h4>
+          <p>فستق حلبي إكسترا كبير مفتوح طبيعياً ومحمص بملح خفيف مقرمش</p>
+          <div class="product-card-bottom">
+            <div class="product-price" data-price="55">55 <span>ر.س</span></div>
+            <button class="btn-add-cart">أضف للسلة 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal-blur" data-category="honey" data-category-name="عسل طبيعي">
+          <div class="product-img-wrap">
+            <img src="img_honey.jpg" alt="عسل سدر دوعني ملكي فاخر" loading="lazy" />
+            <span class="product-badge-overlay">طبيعي 100% 🍯</span>
+          </div>
+          <h4>عسل سدر دوعني ملكي فاخر</h4>
+          <p>عسل سدر يمني أصيل من وادي دوعن بنكهة وقوام علاجي نادر</p>
+          <div class="product-card-bottom">
+            <div class="product-price" data-price="190">190 <span>ر.س</span></div>
+            <button class="btn-add-cart">أضف للسلة 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal-blur" data-category="herbs" data-category-name="أعشاب طبيعية">
+          <div class="product-img-wrap">
+            <img src="img_herbs.jpg" alt="بابونج زهور طبيعية كاملة" loading="lazy" />
+            <span class="product-badge-overlay">عضوي 🌿</span>
+          </div>
+          <h4>بابونج زهور طبيعية كاملة</h4>
+          <p>زهور البابونج الذهبية المهدئة للأعصاب والمعدة والمساعدة على النوم</p>
+          <div class="product-card-bottom">
+            <div class="product-price" data-price="22">22 <span>ر.س</span></div>
+            <button class="btn-add-cart">أضف للسلة 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal-blur" data-category="candy" data-category-name="كاندي وحلويات">
+          <div class="product-img-wrap">
+            <img src="img_candy.jpg" alt="حلقوم تركي بالرمان والفستق" loading="lazy" />
+            <span class="product-badge-overlay">ضيافة ملكية 🍬</span>
+          </div>
+          <h4>حلقوم تركي بالرمان والفستق</h4>
+          <p>راحة حلقوم إسطنبولية فاخرة محشوة بالفستق المقرمش الغني</p>
+          <div class="product-card-bottom">
+            <div class="product-price" data-price="42">42 <span>ر.س</span></div>
+            <button class="btn-add-cart">أضف للسلة 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="products.html" class="btn-primary" style="padding: 12px 32px; font-size: 1rem;">عرض جميع المنتجات (+150 صنف) ←</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories-section" id="categories">
+    <div class="section-header">
+      <span class="section-badge">تشكيلتنا الشاملة</span>
+      <h2 class="section-title">أقسام متجر <span class="gold">Al Hassan</span></h2>
+      <p class="section-subtitle">أكثر من 8 أقسام رئيسية تلبي جميع احتياجات الضيافة والمطبخ الأصيل</p>
+      <div class="title-ornament">
+        <div class="ornament-line"></div>
+        <div class="ornament-diamond"></div>
+        <div class="ornament-line"></div>
+      </div>
+    </div>
+    <div class="categories-grid">
+      <a href="products.html#coffee" class="cat-card cat-coffee reveal-blur">
+        <img class="cat-card-img" src="img_coffee.jpg" alt="قهوة عربية Al Hassan" loading="lazy" />
+        <div class="cat-card-overlay"></div>
+        <div class="cat-icon">☕</div>
+        <div class="cat-info">
+          <h3>قهوة عربية</h3>
+          <p>أجود أنواع البن العربي والخلطات الملكية</p>
+          <span class="cat-count">12 صنف</span>
+        </div>
+        <div class="cat-arrow">&#8592;</div>
+      </a>
+      <a href="products.html#spices" class="cat-card cat-spices reveal-blur">
+        <img class="cat-card-img" src="img_spices.jpg" alt="بهارات فاخرة Al Hassan" loading="lazy" />
+        <div class="cat-card-overlay"></div>
+        <div class="cat-icon">🌶️</div>
+        <div class="cat-info">
+          <h3>بهارات فاخرة</h3>
+          <p>كبسات، بهارات حب، ومطحونة وتتبيلات</p>
+          <span class="cat-count">+90 صنف</span>
+        </div>
+        <div class="cat-arrow">&#8592;</div>
+      </a>
+      <a href="products.html#nuts" class="cat-card cat-nuts reveal-blur">
+        <img class="cat-card-img" src="img_nuts.jpg" alt="مكسرات محمصة Al Hassan" loading="lazy" />
+        <div class="cat-card-overlay"></div>
+        <div class="cat-icon">🥜</div>
+        <div class="cat-info">
+          <h3>مكسرات</h3>
+          <p>فستق، كاجو، لوز، مكاديميا وجوز</p>
+          <span class="cat-count">+22 صنف</span>
+        </div>
+        <div class="cat-arrow">&#8592;</div>
+      </a>
+      <a href="products.html#herbs" class="cat-card cat-herbs reveal-blur">
+        <img class="cat-card-img" src="img_herbs.jpg" alt="أعشاب طبيعية Al Hassan" loading="lazy" />
+        <div class="cat-card-overlay"></div>
+        <div class="cat-icon">🌿</div>
+        <div class="cat-info">
+          <h3>أعشاب طبيعية</h3>
+          <p>أعشاب شافية وزهور شاي معطرة</p>
+          <span class="cat-count">+21 نوع</span>
+        </div>
+        <div class="cat-arrow">&#8592;</div>
+      </a>
+      <a href="products.html#grains" class="cat-card cat-grains reveal-blur">
+        <img class="cat-card-img" src="img_grains.jpg" alt="حبوب طازجة Al Hassan" loading="lazy" />
+        <div class="cat-card-overlay"></div>
+        <div class="cat-icon">🌾</div>
+        <div class="cat-info">
+          <h3>حبوب</h3>
+          <p>سمسم، شيا، كتان، وحبة البركة</p>
+          <span class="cat-count">11 صنف</span>
+        </div>
+        <div class="cat-arrow">&#8592;</div>
+      </a>
+      <a href="products.html#legumes" class="cat-card cat-legumes reveal-blur">
+        <img class="cat-card-img" src="img_legumes.jpg" alt="بقوليات Al Hassan" loading="lazy" />
+        <div class="cat-card-overlay"></div>
+        <div class="cat-icon">🫘</div>
+        <div class="cat-info">
+          <h3>بقوليات</h3>
+          <p>عدس، حمص، فاصوليا، وفول بلدي</p>
+          <span class="cat-count">12 صنف</span>
+        </div>
+        <div class="cat-arrow">&#8592;</div>
+      </a>
+      <a href="products.html#honey" class="cat-card cat-honey reveal-blur">
+        <img class="cat-card-img" src="img_honey.jpg" alt="عسل ملكي Al Hassan" loading="lazy" />
+        <div class="cat-card-overlay"></div>
+        <div class="cat-icon">🍯</div>
+        <div class="cat-info">
+          <h3>عسل ملكي</h3>
+          <p>سدر دوعني، طلح، سمر وغذاء ملكات</p>
+          <span class="cat-count">10 أصناف</span>
+        </div>
+        <div class="cat-arrow">&#8592;</div>
+      </a>
+      <a href="products.html#candy" class="cat-card cat-candy reveal-blur">
+        <img class="cat-card-img" src="img_candy.jpg" alt="كاندي وحلويات Al Hassan" loading="lazy" />
+        <div class="cat-card-overlay"></div>
+        <div class="cat-icon">🍬</div>
+        <div class="cat-info">
+          <h3>كاندي وحلويات</h3>
+          <p>حلقوم تركي، ملبن مبروم، ومجففات</p>
+          <span class="cat-count">10 أصناف</span>
+        </div>
+        <div class="cat-arrow">&#8592;</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Marquee Banner -->
+  <section class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>☕ قهوة عربية ملكية</span><span class="marquee-sep">✦</span>
+        <span>🌶️ أكثر من 90 صنف بهارات طازجة</span><span class="marquee-sep">✦</span>
+        <span>🚚 توصيل سريع بأرامكس وسمسا وريد بوكس</span><span class="marquee-sep">✦</span>
+        <span>💳 دفع بالفيزا والدفع عند الاستلام</span><span class="marquee-sep">✦</span>
+        <span>🥜 مكسرات محمصة يومياً</span><span class="marquee-sep">✦</span>
+        <span>🍯 عسل سدر دوعني طبيعي 100%</span><span class="marquee-sep">✦</span>
+        <span>🌿 أعشاب طبيعية وزهور شافية</span><span class="marquee-sep">✦</span>
+        <span>💬 خدمة عملاء مباشرة عبر واتساب</span><span class="marquee-sep">✦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="about-preview">
+    <div class="about-content">
+      <div class="about-text">
+        <span class="section-badge">قصتنا وتراثنا</span>
+        <h2 class="section-title">Al Hassan Coffee<br /><span class="gold">الجودة في كل تفصيل</span></h2>
+        <p>نحن في Al Hassan Coffee نؤمن بأن نكهة القهوة ورائحة البهارات هما نبض الكرم العربي الأصيل. ننتقي حبوبنا ومحاصيلنا من مزارع اليمن، إثيوبيا، كولومبيا، والهند، ونطحن توابلنا على البارد لنحافظ على كامل الزيوت العطرية النقية.</p>
+        <p>مع باقة متكاملة تضم أكثر من 150 صنفاً، نوفر لكم تجربة تسوق عصرية وسريعة تشمل التوصيل لكافة مدن المملكة ودفع عند الاستلام أو بالبطاقة الإلكترونية.</p>
+        <a href="about.html" class="btn-primary">تعرف على قصة الحسن ←</a>
+      </div>
+      <div class="about-visual">
+        <div class="about-logo-container">
+          <img src="logo2.jpeg" alt="Al Hassan Coffee Logo" class="about-logo" />
+          <div class="logo-ring ring-1"></div>
+          <div class="logo-ring ring-2"></div>
+          <div class="logo-ring ring-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Feed Integration -->
+  <section class="instagram-section">
+    <div class="instagram-header">
+      <span class="section-badge">تابعونا على مواقع التواصل</span>
+      <h2 class="section-title">عالمنا على <span class="gold">انستغرام</span></h2>
+      <a href="https://instagram.com" target="_blank" class="insta-handle-badge">
+        <span>📸</span> @alhassancoffee
+      </a>
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">شاهد جديد التحميص اليومي، خلطات البهارات الحصرية، وطرق تحضير القهوة العربية الأصيلة</p>
+    </div>
+    <div class="insta-grid">
+      <a href="https://instagram.com" target="_blank" class="insta-card reveal-blur">
+        <img src="img_coffee.jpg" alt="Al Hassan Coffee Roasting" loading="lazy" />
+        <div class="insta-overlay">
+          <span class="insta-icon">📸</span>
+          <span class="insta-caption">تحميص بن خولاني ملكي طازج ☕</span>
+        </div>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="insta-card reveal-blur">
+        <img src="img_spices.jpg" alt="Al Hassan Spices" loading="lazy" />
+        <div class="insta-overlay">
+          <span class="insta-icon">📸</span>
+          <span class="insta-caption">طحن وتعبئة بهارات الكبسة الخاصة 🌶️</span>
+        </div>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="insta-card reveal-blur">
+        <img src="img_nuts.jpg" alt="Al Hassan Nuts VIP" loading="lazy" />
+        <div class="insta-overlay">
+          <span class="insta-icon">📸</span>
+          <span class="insta-caption">تحميص الفستق والمكسرات VIP 🥜</span>
+        </div>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="insta-card reveal-blur">
+        <img src="img_candy.jpg" alt="Al Hassan Turkish Delights" loading="lazy" />
+        <div class="insta-overlay">
+          <span class="insta-icon">📸</span>
+          <span class="insta-caption">ضيافة الحلقوم والمكسرات الفاخرة 🍬</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="section-header">
+      <span class="section-badge">آراء عملائنا</span>
+      <h2 class="section-title">ماذا يقول <span class="gold">عملاؤنا</span></h2>
+      <div class="title-ornament">
+        <div class="ornament-line"></div>
+        <div class="ornament-diamond"></div>
+        <div class="ornament-line"></div>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"طلبت قهوة الحسن والبهارات المشكلة، التوصيل عبر سمسا كان سريعاً جداً والتغليف محكم والرائحة فواحة تملأ البيت!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">م</div>
+          <div><strong>محمد العمري</strong><span>الرياض</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card featured">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"أفضل متجر بهارات تعاملت معه في المملكة. أكثر من 90 صنف وكلها طازجة ونظيفة بدون أي شوائب، وسهولة الدفع والطلب خرافية."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">ف</div>
+          <div><strong>فاطمة الشمري</strong><span>جدة</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"العسل السدر الدوعني أصلي 100% والمكسرات مقرمشة وتزن الذهب. شكراً Al Hassan على المصداقية والخدمة الممتازة."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">ع</div>
+          <div><strong>عبدالله الحربي</strong><span>الدمام</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-section">
+    <div class="cta-pattern"></div>
+    <div class="cta-content">
+      <h2>جاهز لتجربة الطعم والمذاق العربي الأصيل؟</h2>
+      <p>اطلب الآن وسنصلك أينما كنت مع خيارات شحن متعددة ودفع مرن</p>
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="products.html" class="btn-primary btn-large">تسوق المنتجات الآن 🛒</a>
+        <a href="https://wa.me/966500000000" target="_blank" class="btn-ghost btn-large">تواصل عبر واتساب 💬</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo-col">
+        <img src="logo1.jpeg" alt="Al Hassan Coffee" class="footer-logo" />
+        <p>وجهتك الأولى للقهوة العربية والبهارات والأعشاب والمكسرات الفاخرة</p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-link">📸</a>
+          <a href="https://wa.me/966500000000" target="_blank" aria-label="WhatsApp" class="social-link">💬</a>
+          <a href="#" aria-label="Twitter" class="social-link">🐦</a>
+          <a href="#" aria-label="Snapchat" class="social-link">👻</a>
+        </div>
+      </div>
+      <div class="footer-links-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="products.html">المنتجات والسلة</a></li>
+          <li><a href="categories.html">الأصناف</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-categories-col">
+        <h4>أصنافنا</h4>
+        <ul>
+          <li><a href="products.html#coffee">قهوة عربية</a></li>
+          <li><a href="products.html#spices">بهارات (+90 صنف)</a></li>
+          <li><a href="products.html#grains">حبوب</a></li>
+          <li><a href="products.html#legumes">بقوليات</a></li>
+          <li><a href="products.html#nuts">مكسرات (+20 صنف)</a></li>
+          <li><a href="products.html#honey">عسل</a></li>
+          <li><a href="products.html#candy">كاندي</a></li>
+          <li><a href="products.html#herbs">أعشاب (+20 نوع)</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h4>خدمة العملاء والشحن</h4>
+        <ul class="contact-list">
+          <li>📍 المملكة العربية السعودية</li>
+          <li>📞 +966 50 000 0000</li>
+          <li>✉️ info@alhassancoffee.com</li>
+          <li>🕐 يومياً من 9 صباحاً حتى 11 مساءً</li>
+          <li>🚚 شحن معتمد: أرامكس | سمسا | ريد بوكس</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Al Hassan Coffee. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <!-- ===================================
+       SLIDE-OVER CART DRAWER
+       =================================== -->
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="سلة التسوق">
+    <div class="cart-header">
+      <h3><span>🛒</span> سلة المشتريات</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="إغلاق السلة">✕</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list">
+      <!-- Injected by JavaScript -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>مجموع المنتجات:</span>
+        <span id="cart-subtotal" style="font-weight: 700;">0 ر.س</span>
+      </div>
+      <div class="cart-shipping-row">
+        <span>تكلفة الشحن التقديرية:</span>
+        <span id="cart-shipping">25 ر.س (أرامكس)</span>
+      </div>
+      <div class="cart-total-row">
+        <span>الإجمالي النهائي:</span>
+        <span id="cart-total">0 ر.س</span>
+      </div>
+      <button class="cart-checkout-btn" id="cart-checkout-btn">
+        <span>إتمام الطلب والدفع</span> 💳
+      </button>
+    </div>
+  </aside>
+
+  <!-- ===================================
+       CHECKOUT MODAL (SHIPPING & PAYMENT)
+       =================================== -->
+  <div class="checkout-modal-backdrop" id="checkout-modal-backdrop">
+    <div class="checkout-modal" id="checkout-modal">
+      <button class="checkout-close-btn" id="checkout-close-btn" aria-label="إغلاق">✕</button>
+
+      <div class="checkout-steps-nav">
+        <div class="step-indicator active"><span class="step-num">1</span> العنوان والشحن</div>
+        <div class="step-indicator active"><span class="step-num">2</span> الدفع الإلكتروني</div>
+      </div>
+
+      <form id="checkout-form">
+        <!-- Customer Details -->
+        <div class="checkout-section-title"><span>📍</span> بيانات المستلم والعنوان</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>الاسم الكامل *</label>
+            <input type="text" name="customer_name" required placeholder="مثال: أحمد عبد الله" value="أحمد عبد الله" />
+          </div>
+          <div class="form-group">
+            <label>رقم الجوال *</label>
+            <input type="tel" name="customer_phone" required placeholder="05XXXXXXXX" value="0501234567" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>المدينة *</label>
+            <select name="customer_city">
+              <option value="الرياض">الرياض</option>
+              <option value="جدة">جدة</option>
+              <option value="مكة المكرمة">مكة المكرمة</option>
+              <option value="المدينة المنورة">المدينة المنورة</option>
+              <option value="الدمام والخبر">الدمام والخبر</option>
+              <option value="بريدة وعنيزة">القصيم (بريدة / عنيزة)</option>
+              <option value="أبها وخميس مشيط">عسير (أبها / الخميس)</option>
+              <option value="مدينة أخرى">مدينة أخرى بالمملكة</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>الحي والشارع *</label>
+            <input type="text" name="customer_address" required placeholder="الحي، اسم الشارع، رقم المبنى" value="حي الملقا، طريق الملك فهد" />
+          </div>
+        </div>
+
+        <!-- Shipping Method Selection -->
+        <div class="checkout-section-title"><span>🚚</span> اختر شركة الشحن والتوصيل</div>
+        <div class="shipping-options-grid">
+          <label class="shipping-card selected">
+            <input type="radio" name="shipping_method" data-name="أرامكس (Aramex)" data-price="25" data-time="1-3 أيام عمل" checked />
+            <span class="shipping-icon">🚚</span>
+            <div class="shipping-details">
+              <span class="shipping-name">أرامكس (Aramex)</span>
+              <span class="shipping-time">توصيل لباب البيت (1-3 أيام)</span>
+            </div>
+            <span class="shipping-price">25 ر.س</span>
+          </label>
+
+          <label class="shipping-card">
+            <input type="radio" name="shipping_method" data-name="سمسا إكسبريس (SMSA)" data-price="28" data-time="1-2 أيام عمل" />
+            <span class="shipping-icon">📦</span>
+            <div class="shipping-details">
+              <span class="shipping-name">سمسا (SMSA)</span>
+              <span class="shipping-time">سريع لجميع المدن (1-2 يوم)</span>
+            </div>
+            <span class="shipping-price">28 ر.س</span>
+          </label>
+
+          <label class="shipping-card">
+            <input type="radio" name="shipping_method" data-name="خزائن ريد بوكس (RedBox)" data-price="15" data-time="2-4 أيام" />
+            <span class="shipping-icon">📮</span>
+            <div class="shipping-details">
+              <span class="shipping-name">ريد بوكس (RedBox)</span>
+              <span class="shipping-time">خزائن ذكية استلام ذاتي</span>
+            </div>
+            <span class="shipping-price">15 ر.س</span>
+          </label>
+
+          <label class="shipping-card">
+            <input type="radio" name="shipping_method" data-name="توصيل سريع نفس اليوم" data-price="35" data-time="خلال ساعات" />
+            <span class="shipping-icon">⚡</span>
+            <div class="shipping-details">
+              <span class="shipping-name">توصيل نفس اليوم</span>
+              <span class="shipping-time">الرياض وجدة فقط</span>
+            </div>
+            <span class="shipping-price">35 ر.س</span>
+          </label>
+        </div>
+
+        <!-- Payment Method Selection -->
+        <div class="checkout-section-title"><span>💳</span> طريقة الدفع</div>
+        <div class="payment-tabs">
+          <button type="button" class="payment-tab-btn active" data-method="visa">💳 بطاقة فيزا / مدى (تجريبي)</button>
+          <button type="button" class="payment-tab-btn" data-method="cod">💵 الدفع عند الاستلام</button>
+          <button type="button" class="payment-tab-btn" data-method="applepay">🍏 Apple Pay</button>
+        </div>
+
+        <!-- Visa Dummy Gateway -->
+        <div id="visa-payment-section">
+          <!-- Interactive Card Preview -->
+          <div class="dummy-card-wrapper">
+            <div class="dummy-card-top">
+              <div class="card-chip"></div>
+              <div class="card-brand-logo">VISA / Mada</div>
+            </div>
+            <div class="card-number-preview" id="card-number-preview">4242 •••• •••• 4242</div>
+            <div class="dummy-card-bottom">
+              <div class="card-holder-name" id="card-holder-preview">AHMAD ABDULLAH</div>
+              <div class="card-expiry-preview" id="card-expiry-preview">12/28</div>
+            </div>
+          </div>
+
+          <button type="button" class="dummy-autofill-btn" id="dummy-autofill-btn">
+            ⚡ اضغط هنا لتعبئة بطاقة فيزا تجريبية للتجربة السريعة بنقرة واحدة
+          </button>
+
+          <div class="form-group">
+            <label>رقم البطاقة</label>
+            <input type="text" id="card-number-input" placeholder="4242 4242 4242 4242" value="4242 8890 2026 4242" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>تاريخ الانتهاء</label>
+              <input type="text" id="card-expiry-input" placeholder="MM/YY" value="12/28" />
+            </div>
+            <div class="form-group">
+              <label>رمز الأمان (CVV)</label>
+              <input type="password" id="card-cvv-input" placeholder="•••" value="849" maxlength="4" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>اسم حامل البطاقة</label>
+            <input type="text" id="card-holder-input" placeholder="كما هو مكتوب على البطاقة" value="AHMAD ABDULLAH" />
+          </div>
+        </div>
+
+        <!-- COD Info -->
+        <div id="cod-payment-section" style="display: none; padding: 20px; background: rgba(255,255,255,0.03); border: 1px dashed var(--border); border-radius: 12px; margin-bottom: 20px;">
+          <p style="font-size: 0.92rem; color: var(--gold);">💵 الدفع عند الاستلام متاح لجميع مدن المملكة. ستقوم بدفع المبلغ نقداً أو بالشبكة لمندوب الشحن عند استلام الطرد.</p>
+        </div>
+
+        <!-- Apple Pay Info -->
+        <div id="applepay-payment-section" style="display: none; padding: 20px; background: rgba(255,255,255,0.03); border: 1px dashed var(--border); border-radius: 12px; margin-bottom: 20px; text-align: center;">
+          <p style="font-size: 0.95rem; color: #fff; margin-bottom: 12px;">🍏 يمكنك الدفع بضغطة واحدة باستخدام Apple Pay على أجهزة آبل المتوافقة.</p>
+          <div style="background: #000; border: 1px solid #444; border-radius: 10px; padding: 12px; display: inline-block; font-size: 1.1rem; font-weight: 700; width: 220px;">Pay with Apple Pay</div>
+        </div>
+
+        <!-- Final Order Summary -->
+        <div style="background: rgba(0,0,0,0.25); border-radius: 14px; padding: 18px; margin-bottom: 24px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+            <span>المنتجات:</span>
+            <span id="checkout-summary-subtotal">0 ر.س</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+            <span>الشحن:</span>
+            <span id="checkout-summary-shipping">25 ر.س (أرامكس)</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 700; color: var(--gold); border-top: 1px dashed rgba(201,168,76,0.3); padding-top: 8px;">
+            <span>المجموع النهائي:</span>
+            <span id="checkout-summary-total">0 ر.س</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; padding: 16px; font-size: 1.1rem; font-weight: 700;">
+          تأكيد الطلب والدفع الآن 🚀
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===================================
+       ORDER SUCCESS RECEIPT MODAL
+       =================================== -->
+  <div class="checkout-modal-backdrop" id="order-success-backdrop">
+    <div class="checkout-modal" style="max-width: 540px;">
+      <div class="order-success-card">
+        <div class="success-checkmark">✓</div>
+        <h2 style="font-size: 1.6rem; color: #fff; margin-bottom: 6px;">تم تأكيد طلبك بنجاح!</h2>
+        <span class="order-id-badge" id="success-order-id">رقم الطلب: #HC-84920</span>
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 20px;">شكراً لتسوقك من Al Hassan Coffee. تم استلام طلبك وجاري تجهيزه للشحن فوراً.</p>
+
+        <div class="receipt-box">
+          <div class="receipt-row">
+            <span>الاسم:</span>
+            <strong id="success-customer-name">أحمد عبد الله</strong>
+          </div>
+          <div class="receipt-row">
+            <span>شركة الشحن:</span>
+            <strong id="success-shipping-company">أرامكس (Aramex)</strong>
+          </div>
+          <div class="receipt-row">
+            <span>طريقة الدفع:</span>
+            <strong id="success-payment-method">بطاقة فيزا تجريبية</strong>
+          </div>
+          <div class="receipt-row total">
+            <span>المبلغ الإجمالي المدفوع:</span>
+            <strong id="success-total-paid">0 ر.س</strong>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+          <a href="#" id="success-whatsapp-btn" target="_blank" class="btn-primary" style="background: linear-gradient(135deg, #25d366, #128c7e); border: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <span>إرسال تفاصيل الفاتورة لواتساب المتجر</span> 💬
+          </a>
+          <button type="button" id="order-success-close-btn" class="btn-ghost" style="width: 100%;">
+            متابعة التسوق في المتجر
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Detail Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-container">
+      <button class="modal-close" aria-label="إغلاق">✕</button>
+      <div class="modal-header">
+        <div class="modal-emoji">✨</div>
+        <span class="modal-category">صنف فاخر</span>
+        <h3 class="modal-title">اسم المنتج</h3>
+      </div>
+      <p class="modal-desc">وصف المنتج</p>
+      
+      <div class="modal-weight-selector">
+        <label>اختر الوزن المطلوب:</label>
+        <div class="weight-options">
+          <button class="weight-btn" data-weight="250 جم">250 جم</button>
+          <button class="weight-btn active" data-weight="500 جم">500 جم</button>
+          <button class="weight-btn" data-weight="1 كجم">1 كجم</button>
+          <button class="weight-btn" data-weight="طلب بالجملة">طلب جملة 📦</button>
+        </div>
+      </div>
+
+      <div class="modal-actions" style="display: flex; gap: 10px;">
+        <button class="btn-primary modal-add-to-cart" style="flex: 1;">أضف للسلة 🛒</button>
+        <a href="#" target="_blank" class="btn-ghost btn-whatsapp-order" style="flex: 1; text-align: center;">طلب واتساب 💬</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/966500000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20Al%20Hassan%20Coffee%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <span>💬</span>
+    <span class="whatsapp-tooltip">تواصل معنا مباشرة عبر واتساب</span>
+  </a>
+
+  <!-- Mobile Sticky Bottom Bar (100% Phone Friendly) -->
+  <nav class="mobile-bottom-bar" aria-label="شريط الجوال السفلي">
+    <ul class="mobile-nav-items">
+      <li>
+        <a href="index.html" class="mobile-nav-link active">
+          <span class="mobile-nav-icon">🏠</span>
+          <span>الرئيسية</span>
+        </a>
+      </li>
+      <li>
+        <a href="products.html" class="mobile-nav-link">
+          <span class="mobile-nav-icon">🛍️</span>
+          <span>المنتجات</span>
+        </a>
+      </li>
+      <li>
+        <button class="mobile-nav-link" id="mobile-cart-btn" aria-label="السلة">
+          <span class="mobile-nav-icon">🛒</span>
+          <span class="mobile-cart-badge cart-badge">0</span>
+          <span>السلة</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="mobile-nav-link" id="mobile-chat-btn" aria-label="المساعد الذكي">
+          <span class="mobile-nav-icon">🤖</span>
+          <span>المساعد</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- AI Chatbot Widget -->
+  <div class="chatbot-overlay" id="chatbot-overlay"></div>
+  <button class="chatbot-fab" id="chatbot-fab" aria-label="المساعد الذكي">
+    🤖
+    <span class="fab-badge">1</span>
+  </button>
+  <div class="chatbot-window" id="chatbot-window">
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div class="chat-header-info">
+        <h4>مساعد الحسن الذكي</h4>
+        <p><span class="chat-status-dot"></span> متاح الآن – اسألني عن أي منتج</p>
+      </div>
+      <div class="chat-header-actions">
+        <button class="chat-action-btn" id="chat-fullscreen-btn" title="ملء الشاشة">⛶</button>
+        <button class="chat-action-btn" id="chat-close-btn" title="إغلاق">✕</button>
+      </div>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="quick-replies" id="quick-replies"></div>
+    <div class="chat-input-area">
+      <textarea class="chat-input" id="chat-input" placeholder="اكتب سؤالك هنا…" rows="1"></textarea>
+      <button class="chat-send-btn" id="chat-send-btn" aria-label="إرسال">➤</button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
